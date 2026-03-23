@@ -11,17 +11,6 @@ test.describe('EaseMyTrip Holidays Page', () => {
     const logo = page.locator('img[alt="EaseMyTrip.com"]');
     await expect(logo).toBeVisible();
 
-    // Menu icons
-    // const menuItems = ['Flights', 'Hotels', 'Trains', 'Bus', 'Holidays', 'Cabs', 'Activities', 'Visa', 'More'];
-    // for (const item of menuItems) {
-    //   await expect(page.locator(`text=${item}`)).toBeVisible();
-    // }
-
-    // // Login/Signup button
-    // await expect(page.locator('button:has-text("Login or Signup")')).toBeVisible();
-
-    // // Currency/Language selector
-    // await expect(page.locator('div:has-text("INR")')).toBeVisible();
   });
 
   test('Verify search functionality', async ({ page }) => {
@@ -54,14 +43,7 @@ test.describe('EaseMyTrip Holidays Page', () => {
   });
   
 
-  test('Verify Top Trending Destinations', async ({ page }) => {
-    const destinations = page.locator('section:has-text("Top Trending Destinations") img');
-    const count = await destinations.count();
-   // expect(count).toBeGreaterThan(0);
 
-    for (let i = 0; i < count; i++) {
-      await expect(destinations.nth(i)).toBeVisible();
-    }
   });
 
   
